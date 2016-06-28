@@ -45,6 +45,8 @@ class Detector extends Base {
 		//проход по входящей строке, для каждой из кодировок инкремент на значение частоты для соответствующей кодировки и соответствующего символа
 		for ($i = 0; $i < strlen($string); ++$i) {
 			foreach ($this->_config['encodings'] as $encoding => $charSpecter) {
+				$charSpecter = include $charSpecter;
+				
 				$index = ord($string[$i]);
 				if (isset($charSpecter[$index])) {
 					if (isset($encRates[$encoding])) {
