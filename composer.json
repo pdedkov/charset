@@ -10,14 +10,14 @@
             "email": "pavel.dedkov@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">= 5.4.0",
         "pdedkov/config": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "Charset\\":""
+            "Charset\\":"src/"
         }
     }
 }
